@@ -3,11 +3,12 @@ pipeline {
 
     stages {
 
-        stage('Pull code') {
-            steps {
-                git 'https://github.com/MASS-SPECC/test.git'
-            }
-        }
+       stage('Pull code') {
+    steps {
+        git branch: 'main', url: 'https://github.com/MASS-SPECC/test.git'
+    }
+}
+
 
         stage('Build Docker Image') {
             steps {
